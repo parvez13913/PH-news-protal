@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
     ArrowRightOutlined,
@@ -81,7 +81,7 @@ const AllNews = ({ allNews }) => {
                                     : news?.description}
                             </p>
                             <Link href={`/news/${news?.id}`}>
-                                <p
+                                <Button
                                     style={{
                                         fontSize: "15px",
                                         marginTop: "20px",
@@ -95,7 +95,7 @@ const AllNews = ({ allNews }) => {
                                     }}
                                 >
                                     Keep Reading <ArrowRightOutlined />
-                                </p>
+                                </Button>
                             </Link>
                         </Card>
                     </Col>
