@@ -1,9 +1,10 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
+import AllNews from "@/components/UI/AllNews";
 
 
-const HomePage = () => {
+const HomePage = ({ allNews }) => {
   return (
     <>
       <Head>
@@ -16,6 +17,7 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
+      <AllNews key={allNews.id} allNews={allNews} />
     </>
   );
 };
